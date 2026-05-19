@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { profileIconUrl, championIconUrl, itemIconUrl } from "@/lib/ddragon";
 import { matchups } from "@/data/matchups";
+import { WinRateChart } from "@/components/WinRateChart";
 
 type SummonerData = {
   account: { puuid: string; gameName: string; tagLine: string };
@@ -318,6 +319,13 @@ export default function StatsPage() {
               <p className="text-xs text-zinc-500">CS/min</p>
             </div>
           </div>
+
+          {/* Win Rate Trend */}
+          {matches.recentGames.length >= 2 && (
+            <div className="mt-8">
+              <WinRateChart games={matches.recentGames} />
+            </div>
+          )}
 
           {/* Matchup Stats with Cross-Referencing */}
           {matches.matchups.length > 0 && (

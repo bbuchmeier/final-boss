@@ -24,6 +24,12 @@ export function Navbar() {
             Builds
           </Link>
           <Link
+            href="/tierlist"
+            className="text-sm font-medium text-zinc-400 transition-colors hover:text-amber-400"
+          >
+            Tier List
+          </Link>
+          <Link
             href="/stats"
             className="text-sm font-medium text-zinc-400 transition-colors hover:text-amber-400"
           >
