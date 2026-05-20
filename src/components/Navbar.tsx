@@ -24,6 +24,16 @@ export function Navbar() {
             Builds
           </Link>
           <Link
+            href="/live"
+            className="flex items-center gap-1.5 text-sm font-medium text-zinc-400 transition-colors hover:text-amber-400"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
+            </span>
+            Live
+          </Link>
+          <Link
             href="/tierlist"
             className="text-sm font-medium text-zinc-400 transition-colors hover:text-amber-400"
           >
